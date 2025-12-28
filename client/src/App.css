@@ -1,0 +1,76 @@
+.app-container {
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.main-heading{
+  text-align: center;
+  font-size: 36px;      
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: black;
+}
+
+.heading-card {
+  background-color:burlywood;          /* white background */
+  border: 2px solid #272a2c;         /* outer border, blue color */
+  border-radius: 12px;                /* rounded corners */
+  padding: 20px 30px;                 /* space inside card */
+  width: 650px;                        /* same width as quiz card */
+  margin: 0 auto 30px auto;           /* center horizontally + bottom margin */
+  text-align: center;                 /* center heading text */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+  height: 60px;
+}
+
+.quiz-card {
+  background-color: rgb(240, 230, 218);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 650px;
+  text-align: center;
+  height: 300px;
+}
+
+  button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+
+.question-card {
+  margin-top: 20px;
+}
+
+.option-item {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.option-item input {
+  margin-right: 10px;
+}
+
+.next-btn {
+  margin-top: 15px;
+  padding: 8px 18px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.next-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
