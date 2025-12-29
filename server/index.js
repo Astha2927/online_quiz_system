@@ -1,5 +1,9 @@
+require("dotenv").config();
+const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
+
+const authRoutes = require("./routes/auth");
 
 const app = express();
 app.use(cors());
@@ -8,6 +12,8 @@ app.use(express.json());
 app.get("/",(req,res) => {
     res.send("Server is running");
 });
+
+app.use("/api/auth", authRoutes);
 
 app.get("/api/test",(req,res) => {
     res.json({message:"Backend API is working"});
@@ -53,6 +59,11 @@ const quizQuestions = [
 app.get("/api/quiz" , (req, res) => {
     res.json(quizQuestions);
 });
+
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error(err));
 
 app.listen(PORT,() => {
     console.log(`Server running on http://localhost:${PORT}`);
